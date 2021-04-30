@@ -20,6 +20,7 @@ jobs:
         with:
           push: true
           tags: ghcr.io/surze/bookinfo-ratings:dev
+
   deploy:
     needs: build
     runs-on: ubuntu-20.04
@@ -46,3 +47,9 @@ jobs:
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
+  acceptance-test:
+    needs: deploy
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Acceptance Test
+      run: curl http://bookinfo.dev.opsta.net/student[X]/ratings/health | grep "Ratings is working"
