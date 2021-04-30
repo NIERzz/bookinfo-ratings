@@ -1,6 +1,6 @@
 ratings:
   namespace: student86-bookinfo-prd
-  image: ghcr.io/nierzz/bookinfo-ratings
+  image: ghcr.io/surze/bookinfo-ratings
   tag: prd
   replicas: 1
   imagePullSecrets: registry-bookinfo

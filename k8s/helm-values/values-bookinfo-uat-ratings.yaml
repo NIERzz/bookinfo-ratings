@@ -1,6 +1,6 @@
 ratings:
   namespace: student86-bookinfo-uat
-  image: ghcr.io/nierzz/bookinfo-ratings
+  image: ghcr.io/surze/bookinfo-ratings
   tag: uat
   replicas: 1
   imagePullSecrets: registry-bookinfo
